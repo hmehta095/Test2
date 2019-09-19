@@ -28,8 +28,7 @@ public class Infection {
             //TC3 infection change if day >7
 
             else{
-                int infected = (7*5) + (day-7)*8 ;
-                return  infected;
+                return  (7*5) + (day-7)*8;
 
             }
         }
