@@ -2,12 +2,15 @@ package com.example.screamitus_android;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
+import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.typeText;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
@@ -29,11 +32,15 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.screamitus_android", appContext.getPackageName());
     }
 
+    @Rule
+    public ActivityTestRule activityRule =
+            new ActivityTestRule<>(MainActivity.class);
 
 
     @Test
     public void testCheckButtonTextBox() throws InterruptedException {
         //TC1
+        onView(withId(R.id.Calculate)).check(matches(isDisplayed()));
         onView(withId(R.id.daysTextBox)).check(matches(isDisplayed()));
         onView(withId(R.id.resultsLabel)).check(matches(isDisplayed()));
 
@@ -46,8 +53,8 @@ public class ExampleInstrumentedTest {
         onView(withId(R.id.daysTextBox))
                 .perform(typeText("5"));
 
-//        onView(withId(R.id.button_main)).perform(click());
-//
+        onView(withId(R.id.Calculate)).perform(click());
+
 
 
     }
