@@ -22,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         int days = Integer.parseInt(tbDays.getText().toString());
 //        resultsLabel.setText(days);
 
-//        // uncomment this code when you do your UI tests
-//        Infection infection = new Infection();
-//        int numInfected = infection.calculateTotalInfected(days);
-//        resultsLabel.setText(String.valueOf(numInfected) + " instructors infected");
+        // uncomment this code when you do your UI tests
+        Infection infection = new Infection();
+        int numInfected = infection.calculateTotalInfected(days);
+        resultsLabel.setText(String.valueOf(numInfected) + " instructors infected");
 
     }
 }
