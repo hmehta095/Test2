@@ -7,6 +7,11 @@ public class Infection {
 
     public int calculateTotalInfected(int day){
 
+
+        if(day % 2 == 0){
+
+            return 0;
+        }
         // TC1 if number of days less than 0
         if(day <=  0){
             return -1;
@@ -24,6 +29,8 @@ public class Infection {
             return  infected;
 
         }
+
+
 
 
 
