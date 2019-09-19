@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         EditText tbDays = findViewById(R.id.daysTextBox);
 
         int days = Integer.parseInt(tbDays.getText().toString());
+//        resultsLabel.setText(days);
 
 //        // uncomment this code when you do your UI tests
 //        Infection infection = new Infection();
