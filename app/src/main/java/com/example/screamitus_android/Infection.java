@@ -13,9 +13,18 @@ public class Infection {
         }
 
         // TC2 If instructor rate is 5 per day
-        else {
+        else if(day >0 && day < 8){
             return  day*5;
         }
+
+        //TC3 infection change if day >7
+
+        else{
+            int infected = (7*5) + (day-7)*8 ;
+            return  infected;
+
+        }
+
 
 
 
